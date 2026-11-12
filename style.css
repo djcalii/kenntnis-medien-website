@@ -251,3 +251,9 @@ section { padding: 72px 0; }
   .start .innen { gap: 8px; }
   .start .finn { max-width: 110px; }
 }
+
+/* Startbereich Handy: Finn ausblenden, er hat weiter unten seinen eigenen Bereich */
+@media (max-width: 760px) {
+  .start { padding-top: 32px; }
+  .start .finn { display: none; }
+}
