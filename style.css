@@ -427,3 +427,11 @@ a.referenz:hover { border-color: var(--gelb); }
 .partner-video { margin: 18px 0 0; }
 .partner-video a { color: var(--blau); font-weight: 700; text-decoration: none; }
 .partner-video a:hover { text-decoration: underline; }
+
+/* Partner-Liste auf dem Handy kompakter */
+@media (max-width: 760px) {
+  .partner { gap: 6px; margin-top: 12px; }
+  .partner li { font-size: .8rem; padding: 4px 11px; }
+  .partner-video { margin-top: 14px; }
+  .partner-video a { font-size: .92rem; }
+}
