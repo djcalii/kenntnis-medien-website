@@ -259,7 +259,7 @@ section { padding: 72px 0; }
 }
 
 /* Formate: alle 5 Karten in einer Reihe statt einer allein in Reihe 2 */
-@media (min-width: 1000px) { .formate { grid-template-columns: repeat(5, 1fr); gap: 16px; } }
+@media (min-width: 1000px) { .formate { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
 
 /* Handy: Karten kompakter (Symbol links, Text rechts), damit die Seite kürzer wird */
 @media (max-width: 760px) {
@@ -422,3 +422,8 @@ a.referenz:hover { border-color: var(--gelb); }
   .medien .m-fraktur { font-size: 1.2rem; }
   .medien .m-serif { font-size: .98rem; letter-spacing: .03em; }
 }
+
+/* Video-Link unter der Partner-Liste */
+.partner-video { margin: 18px 0 0; }
+.partner-video a { color: var(--blau); font-weight: 700; text-decoration: none; }
+.partner-video a:hover { text-decoration: underline; }
