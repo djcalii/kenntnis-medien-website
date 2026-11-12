@@ -404,3 +404,14 @@ a.referenz:hover { border-color: var(--gelb); }
   .kennzahlen .zahlen strong { font-size: 1rem; line-height: 1.25; }
   .kennzahlen .zahlen span { font-size: .74rem; line-height: 1.35; display: block; margin-top: 4px; }
 }
+
+/* Mobiler Start: gleich breite Knöpfe, kompakterer Text, Gründer-Zeile ohne doppeltes „Bekannt aus“ */
+.person-rolle { display: none; }
+@media (max-width: 760px) {
+  .start .einleitung { font-size: 1.02rem; line-height: 1.55; }
+  .start .knoepfe { flex-direction: column; gap: 10px; margin-top: 20px; }
+  .start .knoepfe .knopf { width: 100%; justify-content: center; text-align: center; }
+  .person-vor, .person-presse { display: none; }
+  .person-rolle { display: inline; color: var(--grau); font-size: .88rem; }
+  .person { margin-top: 18px; padding-right: 22px; }
+}
