@@ -491,3 +491,13 @@ a.referenz:hover { border-color: var(--gelb); }
 /* „Bekannt aus“ einheitlich: logo! wie NEXT weiß mit dunkler Schrift */
 .m-zdf em { background: #fff; color: var(--dunkel); }
 .medien a:hover .m-zdf em, .m-zdf:hover em { background: var(--gelb); }
+
+/* Lernvideo-Reihe: Finn auf dem Handy neben der Überschrift */
+.finn-mini { display: none; }
+@media (max-width: 760px) {
+  .zweispaltig > .finn-gross { display: none; }
+  .reihe-kopf { display: grid; grid-template-columns: 1fr 128px; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .reihe-kopf h2 { margin-bottom: 0; }
+  .finn-mini { display: block; width: 128px; height: 128px; object-fit: contain; object-position: center bottom; padding: 8px 6px 0; border-radius: 50%; background: radial-gradient(circle at 50% 58%, var(--hellgelb) 0 62%, transparent 63%); }
+}
+.ganz { white-space: nowrap; }
