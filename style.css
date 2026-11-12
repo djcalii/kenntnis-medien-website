@@ -326,3 +326,35 @@ section { padding: 72px 0; }
 
 /* Sprungziele nicht unter der festen Kopfzeile verstecken */
 section[id] { scroll-margin-top: 72px; }
+
+/* Glanz-Effekt: heller Streifen wischt über die Knöpfe im Startbereich */
+.start .knopf { position: relative; overflow: hidden; isolation: isolate; }
+.start .knopf::after {
+  content: ""; position: absolute; top: -20%; bottom: -20%; left: -60%; width: 45%;
+  background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,.75) 50%, transparent 100%);
+  transform: skewX(-20deg); pointer-events: none; z-index: -1;
+}
+.start .knopf:not(.zweit)::after { animation: glanz 3.6s ease-in-out 1s infinite; }
+.start .knopf.zweit::after { background: linear-gradient(100deg, transparent 0%, rgba(250,204,21,.55) 50%, transparent 100%); animation: glanz 3.6s ease-in-out 2.8s infinite; }
+.start .knopf:hover::after { animation: glanz-einmal .7s ease-out; }
+@keyframes glanz { 0% { left: -60%; } 30%, 100% { left: 130%; } }
+@keyframes glanz-einmal { from { left: -60%; } to { left: 130%; } }
+@media (prefers-reduced-motion: reduce) { .start .knopf::after { animation: none !important; display: none; } }
+
+/* Einblenden beim Scrollen (Klassen setzt menue.js; ohne JavaScript bleibt alles sichtbar) */
+.einblenden { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); }
+.einblenden.sichtbar { opacity: 1; transform: none; }
+
+/* Karten reagieren beim Drüberfahren / Antippen */
+.karte, .format, .video-karte { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, opacity .6s ease; }
+.karte:hover, .format:hover, .video-karte:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(30,27,75,.10); border-color: #C7D4EA; }
+.karte:active, .format:active { transform: translateY(-2px) scale(.99); }
+.presse a { transition: background-color .2s ease, border-color .2s ease; }
+.presse a:hover, .presse a:active { background: var(--hell); }
+
+@media (prefers-reduced-motion: reduce) {
+  .einblenden { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .karte, .format, .video-karte { transition: none; }
+  .karte:hover, .format:hover, .video-karte:hover { transform: none; }
+}
+.einblenden.karte, .einblenden.format, .einblenden.video-karte { transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); }
