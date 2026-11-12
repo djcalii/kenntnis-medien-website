@@ -388,3 +388,19 @@ a.referenz:hover { border-color: var(--gelb); }
   .referenzen { grid-template-columns: 1fr; gap: 10px; }
   .referenz { padding: 14px 18px; }
 }
+
+/* Kennzahlen als eigene helle Leiste unter dem blauen „Bekannt aus“-Block */
+.kennzahlen { background: var(--hell); padding: 26px 0; border-bottom: 1px solid var(--linie); }
+.kennzahlen .zahlen { margin: 0; padding: 0; border: 0; gap: 20px; }
+.kennzahlen .zahlen > div { position: relative; }
+.kennzahlen .zahlen > div + div::before { content: ""; position: absolute; left: -10px; top: 10%; bottom: 10%; width: 1px; background: var(--linie); }
+.kennzahlen .zahlen strong { color: var(--blau); font-size: 1.6rem; }
+.kennzahlen .zahlen span { color: var(--grau); }
+@media (max-width: 760px) {
+  .bekannt { padding: 26px 0 24px; }
+  .kennzahlen { padding: 18px 0; }
+  .kennzahlen .zahlen { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .kennzahlen .zahlen > div + div::before { left: -6px; }
+  .kennzahlen .zahlen strong { font-size: 1rem; line-height: 1.25; }
+  .kennzahlen .zahlen span { font-size: .74rem; line-height: 1.35; display: block; margin-top: 4px; }
+}
