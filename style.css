@@ -482,3 +482,8 @@ a.referenz:hover { border-color: var(--gelb); }
   .kopf .nav { order: 2; margin-left: auto; }
   .kopf .logo { order: 1; }
 }
+
+/* Mobil: Gründer-Zeile im Start ausblenden (Vorstellung steht unter „Über uns“) */
+@media (max-width: 760px) {
+  .start .person { display: none; }
+}
