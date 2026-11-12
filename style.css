@@ -275,3 +275,54 @@ section { padding: 72px 0; }
   .presse { gap: 10px; }
   .karte-presse { padding: 14px 18px; }
 }
+
+/* Kopfzeile: Menü-Symbol und Anfragen-Knopf auf dem Handy */
+.kopf .anfragen, .menue-knopf { display: none; }
+@media (max-width: 760px) {
+  .kopf .innen { gap: 10px; padding: 10px 0; }
+  .kopf .logo { margin-right: auto; }
+  .kopf .logo img { height: 36px; }
+  .kopf .anfragen { display: inline-flex; padding: 8px 16px; font-size: .92rem; }
+  .menue-knopf {
+    display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px; padding: 0 11px; border: 0; border-radius: 12px;
+    background: var(--hell); cursor: pointer;
+  }
+  .menue-knopf span { display: block; height: 2.5px; border-radius: 2px; background: var(--dunkel); transition: transform .2s, opacity .2s; }
+  .kopf.offen .menue-knopf span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .kopf.offen .menue-knopf span:nth-child(2) { opacity: 0; }
+  .kopf.offen .menue-knopf span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+  .nav {
+    display: none; position: absolute; left: 0; right: 0; top: 100%;
+    flex-direction: column; gap: 2px; padding: 10px 16px 18px;
+    background: var(--weiss); border-bottom: 1px solid var(--linie);
+    box-shadow: 0 16px 30px rgba(30,27,75,.12);
+  }
+  .kopf.offen .nav { display: flex; }
+  .nav a, .nav a.nur-gross { display: block; padding: 14px 12px; font-size: 1.1rem; border-radius: 12px; white-space: normal; }
+}
+
+/* Handy: Presse als kompakte Liste, Finn kleiner, Gründer-Karte mit kleinem Foto */
+@media (max-width: 760px) {
+  .presse { gap: 0; border: 1px solid var(--linie); border-radius: 18px; overflow: hidden; background: var(--weiss); }
+  .presse a, .presse .karte-presse { border: 0; border-radius: 0; border-bottom: 1px solid var(--linie); padding: 13px 44px 13px 18px; gap: 1px; position: relative; }
+  .presse > :last-child { border-bottom: 0; }
+  .presse a::after { content: "›"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: var(--blau); }
+  .presse strong { font-size: 1rem; }
+  .presse span { font-size: .88rem; }
+
+  .zweispaltig { gap: 16px; }
+  .zweispaltig .finn { max-width: 130px; }
+
+  .person-karte { grid-template-columns: 76px 1fr; column-gap: 16px; row-gap: 0; align-items: center; padding: 20px; }
+  .person-karte > div { display: contents; }
+  .person-karte .portrait { grid-row: 1 / span 2; width: 76px; height: 76px; max-width: none; object-fit: cover; object-position: center 20%; border-radius: 50%; align-self: center; }
+  .person-karte h3 { margin: 0; align-self: end; font-size: 1.3rem; }
+  .person-karte .untertitel { margin: 0; align-self: start; }
+  .person-karte p:not(.untertitel), .person-karte .zitat { grid-column: 1 / -1; }
+  .person-karte p:not(.untertitel) { margin-top: 16px; }
+  .person-karte .zitat { font-size: .95rem; margin-bottom: 0; }
+}
+
+/* Sprungziele nicht unter der festen Kopfzeile verstecken */
+section[id] { scroll-margin-top: 72px; }
