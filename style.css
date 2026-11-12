@@ -501,3 +501,11 @@ a.referenz:hover { border-color: var(--gelb); }
   .finn-mini { display: block; width: 128px; height: 128px; object-fit: contain; object-position: center bottom; padding: 8px 6px 0; border-radius: 50%; background: radial-gradient(circle at 50% 58%, var(--hellgelb) 0 62%, transparent 63%); }
 }
 .ganz { white-space: nowrap; }
+
+/* Mobil straffen: kleinere Abstände zwischen Abschnitten, kompaktere Einleitungen */
+@media (max-width: 760px) {
+  section { padding: 44px 0; }
+  .einleitung { font-size: 1.02rem; line-height: 1.55; }
+  .person-karte .zitat { font-size: .88rem; line-height: 1.5; padding: 14px 16px; }
+  .highlight { margin-top: 28px; }
+}
