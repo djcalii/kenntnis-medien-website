@@ -512,3 +512,10 @@ a.referenz:hover { border-color: var(--gelb); }
 
 /* Material: Knöpfe auf dem Handy gleich breit */
 @media(max-width:760px){.video-karte .knoepfe{flex-direction:column;gap:10px}.video-karte .knoepfe .knopf{width:100%;justify-content:center;text-align:center}}
+
+/* Umfang und Kosten */
+.ablauf{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.ablauf>div{background:var(--hell);border-left:4px solid var(--gelb);border-radius:14px;padding:18px 20px}
+.ablauf strong{display:block;font-family:var(--rund);font-weight:800;font-size:1.08rem;color:var(--blau);margin-bottom:4px}
+.ablauf p{margin:0;font-size:.95rem;line-height:1.5}
+@media(max-width:760px){.ablauf{grid-template-columns:1fr;gap:10px}.ablauf>div{padding:14px 16px}}
