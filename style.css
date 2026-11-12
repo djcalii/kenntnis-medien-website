@@ -244,3 +244,10 @@ section { padding: 72px 0; }
   .fotoreihe .gross { grid-column: 1 / -1; height: 260px; }
   .fotoreihe figure { height: 170px; border-radius: 14px; }
 }
+
+/* Startbereich Handy: Finn kleiner, damit die Knöpfe sofort sichtbar sind */
+@media (max-width: 760px) {
+  .start { padding-top: 20px; }
+  .start .innen { gap: 8px; }
+  .start .finn { max-width: 110px; }
+}
