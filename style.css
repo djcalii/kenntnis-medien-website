@@ -436,7 +436,22 @@ a.referenz:hover { border-color: var(--gelb); }
   .partner-video a { font-size: .92rem; }
 }
 
-/* Referenz 1. FC Union Berlin mit Logo */
+/* Referenzen als Logo-Reihe: alle Logos gleich hoch, ruhig nebeneinander */
+.logo-reihe { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.logo-reihe li { background: var(--weiss); border: 1px solid var(--linie); border-radius: 18px; padding: 20px 18px 16px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+.logo-reihe img { height: 64px; width: auto; max-width: 100%; object-fit: contain; margin-bottom: 10px; }
+.logo-reihe strong { font-size: .95rem; color: var(--dunkel); line-height: 1.3; }
+.logo-reihe span { font-size: .82rem; color: var(--grau); line-height: 1.35; }
+@media (min-width: 1000px) { .logo-reihe { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 760px) {
+  .logo-reihe { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .logo-reihe li { padding: 16px 12px 12px; }
+  .logo-reihe img { height: 48px; margin-bottom: 8px; }
+  .logo-reihe strong { font-size: .86rem; }
+  .logo-reihe span { font-size: .76rem; }
+}
+
+/* Referenz 1. FC Union Berlin mit Logo (bis die Logo-Reihe genug Logos hat) */
 .union-referenz { display: flex; align-items: center; gap: 28px; margin-top: 16px; background: var(--weiss); border: 1px solid var(--linie); border-radius: 20px; padding: 22px 28px; max-width: 720px; }
 .union-referenz img { width: 170px; height: auto; flex-shrink: 0; }
 .union-referenz div { display: flex; flex-direction: column; gap: 4px; }
@@ -445,4 +460,18 @@ a.referenz:hover { border-color: var(--gelb); }
 @media (max-width: 760px) {
   .union-referenz { flex-direction: column; align-items: flex-start; gap: 14px; padding: 18px 20px; }
   .union-referenz img { width: 140px; }
+}
+
+/* „Das sagen Schulen“ als Sprechblasen */
+.stimmen { gap: 24px; align-items: start; }
+.stimmen blockquote { background: none; padding: 0; border-radius: 0; }
+.stimmen blockquote p { position: relative; background: #E6EEFB; border-radius: 22px; padding: 22px 24px; margin: 0 0 22px; line-height: 1.4; }
+.stimmen blockquote p::after { content: ""; position: absolute; left: 34px; bottom: -14px; width: 0; height: 0; border-left: 0 solid transparent; border-right: 22px solid transparent; border-top: 16px solid #E6EEFB; }
+.stimmen blockquote:nth-child(2n) p { background: var(--hellgelb); }
+.stimmen blockquote:nth-child(2n) p::after { border-top-color: var(--hellgelb); }
+.stimmen cite { display: flex; align-items: center; gap: 10px; padding-left: 22px; }
+.stimmen cite::before { content: ""; width: 30px; height: 30px; flex-shrink: 0; border-radius: 50%; background: var(--blau) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 10l9-5 9 5-9 5-9-5z'/%3E%3Cpath d='M7 12v4c0 1 2.5 3 5 3s5-2 5-3v-4'/%3E%3C/svg%3E") center / 18px no-repeat; }
+@media (max-width: 760px) {
+  .stimmen { gap: 18px; }
+  .stimmen blockquote p { padding: 18px 20px; font-size: 1.05rem; }
 }
