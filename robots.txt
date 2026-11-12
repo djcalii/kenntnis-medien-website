@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kenntnis-medien.de/sitemap.xml
