@@ -475,3 +475,10 @@ a.referenz:hover { border-color: var(--gelb); }
   .stimmen { gap: 18px; }
   .stimmen blockquote p { padding: 18px 20px; font-size: 1.05rem; }
 }
+
+/* Anfragen-Knopf auch am Desktop: rechts neben der Navigation */
+@media (min-width: 761px) {
+  .kopf .anfragen { display: inline-flex; order: 3; padding: 8px 18px; font-size: .92rem; margin-left: 8px; }
+  .kopf .nav { order: 2; margin-left: auto; }
+  .kopf .logo { order: 1; }
+}
