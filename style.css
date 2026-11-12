@@ -358,3 +358,33 @@ section[id] { scroll-margin-top: 72px; }
   .karte:hover, .format:hover, .video-karte:hover { transform: none; }
 }
 .einblenden.karte, .einblenden.format, .einblenden.video-karte { transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); }
+
+/* Highlight „WUNDEN“ */
+.highlight { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: center; margin-top: 28px; padding: 22px; border-radius: 24px; background: var(--dunkel); color: #fff; text-decoration: none; transition: transform .25s ease, box-shadow .25s ease; }
+.highlight:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(30,27,75,.25); }
+.highlight-bild { position: relative; display: block; border-radius: 16px; overflow: hidden; }
+.highlight-bild img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.highlight .play { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; background: var(--gelb); box-shadow: 0 6px 18px rgba(0,0,0,.3); }
+.highlight .play::after { content: ""; position: absolute; left: 26px; top: 20px; border-left: 18px solid var(--dunkel); border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.highlight-text { display: flex; flex-direction: column; gap: 8px; }
+.highlight .kennzeile { align-self: flex-start; background: rgba(250,204,21,.15); color: var(--gelb); }
+.highlight strong { font-family: var(--rund); font-weight: 900; font-size: 1.45rem; line-height: 1.2; }
+.highlight-text > span:not(.kennzeile):not(.highlight-link) { color: #D6DBF0; }
+.highlight-link { color: var(--gelb); font-family: var(--rund); font-weight: 800; }
+
+/* Ausgewählte Referenzen */
+.referenzen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+.referenz { display: flex; flex-direction: column; gap: 4px; padding: 18px 20px; border-radius: 18px; background: var(--hellgelb); border: 1px solid #F5E08A; color: var(--dunkel); text-decoration: none; }
+.referenz strong { font-family: var(--rund); font-weight: 900; font-size: 1.15rem; }
+.referenz span { color: var(--grau); font-size: .95rem; }
+a.referenz span { color: var(--blau); font-weight: 700; }
+a.referenz:hover { border-color: var(--gelb); }
+
+@media (max-width: 760px) {
+  .highlight { grid-template-columns: 1fr; gap: 16px; padding: 16px; border-radius: 20px; }
+  .highlight strong { font-size: 1.25rem; }
+  .highlight .play { width: 54px; height: 54px; margin: -27px 0 0 -27px; }
+  .highlight .play::after { left: 22px; top: 16px; border-left-width: 15px; border-top-width: 11px; border-bottom-width: 11px; }
+  .referenzen { grid-template-columns: 1fr; gap: 10px; }
+  .referenz { padding: 14px 18px; }
+}

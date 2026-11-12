@@ -22,7 +22,7 @@
   var auswahl = [
     'main section:not(.start) h2', 'main section:not(.start) .einleitung', 'main section:not(.start) .kennzeile',
     '.karte', '.format', '.fotoreihe figure', '.person-karte', '.presse', '.stimmen blockquote',
-    '.partner', '.zahlen > *', '.video-karte', '.zweispaltig > *', '.haken', 'main h3'
+    '.partner', '.highlight', '.referenz', '.zahlen > *', '.video-karte', '.zweispaltig > *', '.haken', 'main h3'
   ].join(',');
   var elemente = Array.prototype.slice.call(document.querySelectorAll(auswahl))
     .filter(function (el) { return !el.closest('.start') && !el.closest('.recht'); });
