@@ -509,3 +509,6 @@ a.referenz:hover { border-color: var(--gelb); }
   .person-karte .zitat { font-size: .88rem; line-height: 1.5; padding: 14px 16px; }
   .highlight { margin-top: 28px; }
 }
+
+/* Material: Knöpfe auf dem Handy gleich breit */
+@media(max-width:760px){.video-karte .knoepfe{flex-direction:column;gap:10px}.video-karte .knoepfe .knopf{width:100%;justify-content:center;text-align:center}}
