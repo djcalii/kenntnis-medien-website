@@ -257,3 +257,21 @@ section { padding: 72px 0; }
   .start { padding-top: 32px; }
   .start .finn { display: none; }
 }
+
+/* Formate: alle 5 Karten in einer Reihe statt einer allein in Reihe 2 */
+@media (min-width: 1000px) { .formate { grid-template-columns: repeat(5, 1fr); gap: 16px; } }
+
+/* Handy: Karten kompakter (Symbol links, Text rechts), damit die Seite kürzer wird */
+@media (max-width: 760px) {
+  .raster { gap: 12px; }
+  .karte { display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; padding: 16px 18px; border-radius: 16px; }
+  .karte .sym { width: 44px; height: 44px; margin: 0; grid-row: 1 / span 2; }
+  .karte h3 { margin: 0 0 4px; font-size: 1.05rem; }
+  .karte p { font-size: .95rem; }
+  .formate { gap: 12px; }
+  .format { padding: 16px 18px; border-radius: 16px; }
+  .format h3 { margin: 0 0 4px; font-size: 1.05rem; }
+  .format p { font-size: .95rem; }
+  .presse { gap: 10px; }
+  .karte-presse { padding: 14px 18px; }
+}
