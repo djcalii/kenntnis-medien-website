@@ -533,3 +533,7 @@ a.referenz:hover { border-color: var(--gelb); }
 .highlight a.highlight-link{color:var(--gelb);text-decoration:none;align-self:flex-start}
 .highlight a.highlight-link:hover{text-decoration:underline}
 .highlight:hover{transform:none;box-shadow:none}
+
+.person-karte .zitat{position:relative;margin:24px 0 0;padding:20px 24px;background:var(--hellgelb);border:0;border-radius:22px;font-style:normal;font-family:var(--rund);font-weight:700;font-size:1.12rem;line-height:1.45;color:var(--dunkel)}
+.person-karte .zitat::before{content:"";position:absolute;left:34px;top:-14px;border-right:22px solid transparent;border-bottom:16px solid var(--hellgelb)}
+@media(max-width:760px){.person-karte .zitat{font-size:1rem;padding:16px 18px;margin-top:22px}}
