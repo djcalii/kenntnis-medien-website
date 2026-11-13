@@ -519,3 +519,10 @@ a.referenz:hover { border-color: var(--gelb); }
 .ablauf strong{display:block;font-family:var(--rund);font-weight:800;font-size:1.08rem;color:var(--blau);margin-bottom:4px}
 .ablauf p{margin:0;font-size:.95rem;line-height:1.5}
 @media(max-width:760px){.ablauf{grid-template-columns:1fr;gap:10px}.ablauf>div{padding:14px 16px}}
+
+.ziele{margin-top:28px}
+.ziele .haken{display:grid;grid-template-columns:1fr 1fr;column-gap:32px;margin:12px 0 0}
+.schritte{counter-reset:schritt}
+.schritte>div{counter-increment:schritt}
+.schritte strong::before{content:counter(schritt);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;margin-right:10px;border-radius:50%;background:var(--blau);color:#fff;font-size:.9rem;vertical-align:1px}
+@media(max-width:760px){.ziele .haken{grid-template-columns:1fr}}
