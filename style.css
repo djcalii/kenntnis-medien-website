@@ -526,3 +526,10 @@ a.referenz:hover { border-color: var(--gelb); }
 .schritte>div{counter-increment:schritt}
 .schritte strong::before{content:counter(schritt);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;margin-right:10px;border-radius:50%;background:var(--blau);color:#fff;font-size:.9rem;vertical-align:1px}
 @media(max-width:760px){.ziele .haken{grid-template-columns:1fr}}
+
+.highlight .video{aspect-ratio:16/9}
+.highlight .video .play{transform:none;border:0;display:block}
+.highlight .video .play::after{margin:0}
+.highlight a.highlight-link{color:var(--gelb);text-decoration:none;align-self:flex-start}
+.highlight a.highlight-link:hover{text-decoration:underline}
+.highlight:hover{transform:none;box-shadow:none}
