@@ -28,6 +28,18 @@
       liste.appendChild(li);
     });
     block.hidden = false;
+    // Eine Zeile oben unter der Einleitung: nächste Folge, Tipp springt zum Block „Demnächst“
+    var einleitung = document.querySelector(".einleitung");
+    if (einleitung) {
+      var erste = liste.querySelector("li");
+      var zeile = document.createElement("a");
+      zeile.className = "naechste-folge";
+      zeile.href = "#demnaechst";
+      zeile.innerHTML = '<span>Nächste Folge:</span> <b></b> <span class="wann"></span> <span aria-hidden="true">↓</span>';
+      zeile.querySelector("b").textContent = bald[0].titel + " ·";
+      zeile.querySelector(".wann").textContent = erste.querySelector(".bald-datum").textContent;
+      einleitung.parentNode.insertBefore(zeile, einleitung.nextSibling);
+    }
   }
   // Seite bleibt offen, während die nächste Folge erscheint: dann neu laden
   if (naechste !== null && naechste - jetzt < 864e5) setTimeout(function () { location.reload(); }, naechste - jetzt + 2000);

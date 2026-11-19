@@ -123,6 +123,10 @@ section { padding: 72px 0; }
 .bald-liste b { display: block; font-size: 1.05rem; line-height: 1.25; }
 .bald-datum { display: inline-block; font-size: .78rem; font-weight: 800; color: var(--blau); background: #E8EFFB; border-radius: 999px; padding: 2px 10px; margin-bottom: 4px; }
 .bald-liste small { display: block; color: var(--grau); font-size: .85rem; margin-top: 2px; }
+.naechste-folge { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 0 6px; margin-top: 14px; padding: 8px 16px; border-radius: 999px; background: #E8EFFB; color: var(--blau); font-size: .95rem; text-decoration: none; }
+.naechste-folge:hover { background: #DCE6F8; }
+.naechste-folge b { color: var(--dunkel, #1E1B4B); }
+.demnaechst { scroll-margin-top: 90px; }
 .bald-hinweis { margin: 14px 0 0; color: var(--grau); font-size: .95rem; }
 @media (max-width: 420px) { .bald-liste img { width: 104px; } }
 .bald { font-size: .9rem; color: var(--grau); font-style: italic; align-self: center; }
