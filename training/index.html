@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Finns Detektivbüro | Kenntnis Medien</title>
+  <meta name="description" content="Kostenloses Detektivspiel zur Medienkompetenz für Kinder (Klasse 4–6): Mit Finn, dem Fakten-Fuchs, Spuren suchen und Fake News entlarven. Ohne Anmeldung, nichts wird gespeichert.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kenntnis-medien.de/training/">
+  <link rel="canonical" href="https://kenntnis-medien.de/training/">
+  <meta property="og:title" content="Finns Detektivbüro | Kenntnis Medien">
+  <meta property="og:description" content="Das Detektivspiel mit Finn, dem Fakten-Fuchs: Spuren suchen, Beweise sammeln, Fake News entlarven.">
+  <meta property="og:image" content="https://kenntnis-medien.de/bilder/vorschau.jpg">
+  <meta property="og:locale" content="de_DE">
+  <link rel="icon" href="../bilder/favicon.png">
+  <link rel="apple-touch-icon" href="../bilder/favicon.png">
+  <link rel="stylesheet" href="../style.css?v=32">
+  <link rel="stylesheet" href="spiel.css?v=2">
+</head>
+<body>
+  <header class="t-kopf">
+    <div class="innen">
+      <a href="../"><img src="../bilder/logo.webp" alt="Kenntnis Medien" width="400" height="252"></a>
+      <a class="zurueck" href="../material/">Zum Unterrichtsmaterial</a>
+    </div>
+  </header>
+
+  <main class="buehne" id="buehne">
+    <div class="hud" id="hud" hidden>
+      <span class="hud-fall" id="hud-fall">Fall 1</span>
+      <span class="hud-mitte">
+        <span class="hud-akte" id="hud-akte" title="Spuren und Beweise in der Fallakte"><img src="../bilder/sym-lupe.webp" alt=""> <b id="hud-zahl">0</b></span>
+      </span>
+      <button class="hud-ton" id="ton" type="button" aria-label="Ton ausschalten" aria-pressed="true"></button>
+    </div>
+    <div class="meter" id="meter" hidden>
+      <span>Aufregung im Klassenchat</span>
+      <div class="meter-balken"><div id="meter-stand"></div></div>
+    </div>
+    <div class="szene" id="szene" aria-live="polite"></div>
+  </main>
+
+  <noscript><p style="padding:20px">Für das Spiel muss JavaScript eingeschaltet sein.</p></noscript>
+  <script src="spiel.js?v=2"></script>
+</body>
+</html>
