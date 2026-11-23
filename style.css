@@ -555,22 +555,18 @@ a.referenz:hover { border-color: var(--gelb); }
 
 /* Spiel-Kasten auf der Material-Seite */
 .spiel-kasten {
-  display: grid; grid-template-columns: 120px 1fr auto; gap: 20px; align-items: center;
-  margin: 28px 0 8px; padding: 18px 22px; border-radius: 22px;
+  display: flex; gap: 14px; align-items: center;
+  margin: 20px 0 4px; padding: 10px 16px; border-radius: 16px;
   background: var(--dunkel); color: var(--weiss); text-decoration: none;
-  border: 3px solid var(--gelb); box-shadow: 0 6px 0 rgba(30,27,75,.18);
-  transition: transform .15s;
+  border: 2px solid var(--gelb); transition: transform .15s;
 }
-.spiel-kasten:hover { transform: translateY(-2px); }
-.spiel-kasten img { width: 120px; height: auto; display: block; }
-.spiel-text { display: flex; flex-direction: column; gap: 6px; line-height: 1.45; }
-.spiel-text strong { font-family: var(--rund); font-weight: 900; font-size: 1.5rem; color: var(--gelb); }
-.spiel-marke { font-family: var(--rund); font-weight: 800; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; opacity: .85; }
-.spiel-adresse { font-family: var(--rund); font-weight: 800; font-size: .95rem; opacity: .75; }
-.spiel-kasten .knopf { white-space: nowrap; border-color: var(--gelb); }
+.spiel-kasten:hover { transform: translateY(-1px); }
+.spiel-kasten img { width: 44px; height: auto; flex: none; }
+.spiel-text { display: flex; flex-direction: column; gap: 1px; line-height: 1.35; font-size: .95rem; flex: 1; }
+.spiel-text strong { font-family: var(--rund); font-weight: 900; font-size: 1.1rem; color: var(--gelb); }
+.spiel-kasten .knopf { white-space: nowrap; border-color: var(--gelb); padding: 8px 16px; font-size: .95rem; flex: none; }
 @media (max-width: 640px) {
-  .spiel-kasten { grid-template-columns: 84px 1fr; gap: 14px; padding: 16px; }
-  .spiel-kasten img { width: 84px; }
-  .spiel-text strong { font-size: 1.3rem; }
-  .spiel-kasten .knopf { grid-column: 1 / -1; justify-content: center; }
+  .spiel-kasten { flex-wrap: wrap; }
+  .spiel-text { flex-basis: calc(100% - 60px); }
+  .spiel-kasten .knopf { flex-basis: 100%; justify-content: center; }
 }
