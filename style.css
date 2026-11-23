@@ -552,3 +552,25 @@ a.referenz:hover { border-color: var(--gelb); }
 .person-karte .zitat{position:relative;margin:24px 0 0;padding:20px 24px;background:var(--hellgelb);border:0;border-radius:22px;font-style:normal;font-family:var(--rund);font-weight:700;font-size:1.12rem;line-height:1.45;color:var(--dunkel)}
 .person-karte .zitat::before{content:"";position:absolute;left:34px;top:-14px;border-right:22px solid transparent;border-bottom:16px solid var(--hellgelb)}
 @media(max-width:760px){.person-karte .zitat{font-size:1rem;padding:16px 18px;margin-top:22px}}
+
+/* Spiel-Kasten auf der Material-Seite */
+.spiel-kasten {
+  display: grid; grid-template-columns: 120px 1fr auto; gap: 20px; align-items: center;
+  margin: 28px 0 8px; padding: 18px 22px; border-radius: 22px;
+  background: var(--dunkel); color: var(--weiss); text-decoration: none;
+  border: 3px solid var(--gelb); box-shadow: 0 6px 0 rgba(30,27,75,.18);
+  transition: transform .15s;
+}
+.spiel-kasten:hover { transform: translateY(-2px); }
+.spiel-kasten img { width: 120px; height: auto; display: block; }
+.spiel-text { display: flex; flex-direction: column; gap: 6px; line-height: 1.45; }
+.spiel-text strong { font-family: var(--rund); font-weight: 900; font-size: 1.5rem; color: var(--gelb); }
+.spiel-marke { font-family: var(--rund); font-weight: 800; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; opacity: .85; }
+.spiel-adresse { font-family: var(--rund); font-weight: 800; font-size: .95rem; opacity: .75; }
+.spiel-kasten .knopf { white-space: nowrap; border-color: var(--gelb); }
+@media (max-width: 640px) {
+  .spiel-kasten { grid-template-columns: 84px 1fr; gap: 14px; padding: 16px; }
+  .spiel-kasten img { width: 84px; }
+  .spiel-text strong { font-size: 1.3rem; }
+  .spiel-kasten .knopf { grid-column: 1 / -1; justify-content: center; }
+}
