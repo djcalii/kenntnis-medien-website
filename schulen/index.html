@@ -24,6 +24,9 @@
     .app-bilder .stapel { display: grid; gap: 16px; }
     .bericht-zeile { display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: center; margin-top: 32px; }
     .bericht-zeile img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--linie); box-shadow: 0 8px 24px rgba(30,27,75,.08); display: block; }
+    .tage-raster .karte .bezug { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--linie); font-size: .86rem; line-height: 1.35; color: var(--dunkel); font-weight: 700; }
+    .tage-raster .karte .bezug span { display: block; font-size: .74rem; font-weight: 800; letter-spacing: .03em; color: var(--grau); margin-top: 6px; }
+    .tage-raster .karte .bezug span:first-child { margin-top: 0; }
     .hinweis-klein { color: var(--grau); font-size: .9rem; margin-top: 8px; }
     @media (max-width: 760px) {
       .app-bilder, .bericht-zeile { grid-template-columns: 1fr; }
@@ -85,23 +88,28 @@
             <img class="sym" src="../bilder/sym-handy.webp" alt="" width="160" height="160">
             <h3><span class="tag-nr">Tag 1</span>Handy-Tricks durchschauen</h3>
             <p>Warum „nur fünf Minuten“ so oft zwei Stunden werden: Likes, Benachrichtigungen, Endlos-Scrollen.<span class="merksatz">„Ich bin der Boss, nicht mein Handy!“</span></p>
+            <p class="bezug"><span>Basiscurriculum Medienbildung</span>Analysieren · Reflektieren<span>KMK-Kompetenzrahmen</span>4.3 · 6.2</p>
           </div>
           <div class="karte">
             <img class="sym" src="../bilder/sym-schloss.webp" alt="" width="160" height="160">
             <h3><span class="tag-nr">Tag 2</span>Datenspuren und Passwörter</h3>
             <p>Was ein öffentliches Profil verrät und wie man ein Passwort baut, das niemand errät.<span class="merksatz">„Meine Daten und mein Passwort gehören mir!“</span></p>
+            <p class="bezug"><span>Basiscurriculum Medienbildung</span>Kommunizieren · Reflektieren<span>KMK-Kompetenzrahmen</span>4.1 · 4.2</p>
           </div>
           <div class="karte">
             <img class="sym" src="../bilder/sym-zeitung.webp" alt="" width="160" height="160">
             <h3><span class="tag-nr">Tag 3</span>Fake News erkennen</h3>
             <p>Ein Kettenbrief im Klassenchat: Wer steckt dahinter, und wie prüft man so etwas?<span class="merksatz">„Erst prüfen, dann teilen!“</span></p>
+            <p class="bezug"><span>Basiscurriculum Medienbildung</span>Informieren · Analysieren<span>KMK-Kompetenzrahmen</span>1.2 · 6.1</p>
           </div>
           <div class="karte">
             <img class="sym" src="../bilder/sym-schutz.webp" alt="" width="160" height="160">
             <h3><span class="tag-nr">Tag 4</span>Mutig gegen Cybermobbing</h3>
             <p>Hinschauen statt mitlachen: Was Betroffene, Zuschauer und die Klasse tun können.<span class="merksatz">„Nicht mitlachen, Hilfe holen!“</span></p>
+            <p class="bezug"><span>Basiscurriculum Medienbildung</span>Kommunizieren · Reflektieren<span>KMK-Kompetenzrahmen</span>2.4 · 4.1</p>
           </div>
         </div>
+        <p class="hinweis-klein">Die Fälle sind den Kompetenzbereichen des Berliner Basiscurriculums Medienbildung (Rahmenlehrplan 1–10, Teil B) und dem KMK-Kompetenzrahmen „Bildung in der digitalen Welt“ zugeordnet. Die KMK-Kompetenzen stehen auch im Gesamtbericht für die Schule.</p>
       </div>
     </section>
 
