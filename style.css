@@ -570,3 +570,46 @@ a.referenz:hover { border-color: var(--gelb); }
   .spiel-text { flex-basis: calc(100% - 60px); }
   .spiel-kasten .knopf { flex-basis: 100%; justify-content: center; }
 }
+
+/* Startseite: Wegweiser und Qualität (v=35) */
+.wege { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 28px; }
+.weg { display: grid; grid-template-columns: 150px 1fr; background: var(--weiss); border: 2px solid var(--linie); border-radius: 22px; overflow: hidden; text-decoration: none; color: var(--dunkel); transition: transform .15s, border-color .15s, box-shadow .15s; }
+.weg:hover { transform: translateY(-2px); border-color: var(--blau); box-shadow: 0 8px 24px rgba(11,63,158,.12); }
+.weg-bild { background: #EAF1FF; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+.weg-bild img { width: 100%; height: 100%; object-fit: cover; }
+.weg-finn { background: linear-gradient(160deg, #EAF1FF, #C9DAFF); padding: 18px 10px 0; }
+.weg-finn img { object-fit: contain; height: auto; max-height: 220px; }
+.weg-inhalt { display: flex; flex-direction: column; gap: 8px; padding: 22px 22px 20px; }
+.weg-marke { align-self: flex-start; font-family: var(--rund); font-size: .8rem; font-weight: 800; color: var(--petrol); background: #E6F4F2; border-radius: 999px; padding: 3px 11px; }
+.weg-inhalt strong { font-family: var(--rund); font-weight: 900; font-size: 1.3rem; line-height: 1.2; color: var(--blau); }
+.weg-inhalt > span:not(.weg-marke):not(.weg-link) { color: var(--grau); }
+.weg-link { margin-top: auto; padding-top: 4px; font-family: var(--rund); font-weight: 800; color: var(--blau); }
+.wege-klein { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 18px; }
+.wege-klein a { display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-radius: 18px; background: var(--hell); color: var(--dunkel); text-decoration: none; border: 1px solid var(--linie); }
+.wege-klein a:hover { border-color: var(--blau); }
+.wege-klein img { width: 44px; height: 44px; flex: none; }
+.wege-klein span { color: var(--grau); line-height: 1.35; }
+.wege-klein strong { display: block; font-family: var(--rund); font-weight: 900; color: var(--dunkel); }
+.qualitaet { background: var(--dunkel); color: var(--weiss); }
+.qualitaet h2 { color: var(--weiss); }
+.qualitaet .kennzeile { background: rgba(250,204,21,.16); color: var(--gelb); }
+.qualitaet-raster { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 28px; }
+.qualitaet-raster > div { background: var(--weiss); border-radius: 20px; padding: 22px; border-top: 4px solid var(--gelb); color: var(--dunkel); }
+.qualitaet-raster img { width: 44px; height: 44px; margin-bottom: 10px; }
+.qualitaet-raster h3 { font-size: 1.1rem; color: var(--blau); }
+.qualitaet-raster p { margin: 0; color: var(--grau); font-size: .97rem; }
+@media (max-width: 980px) { .qualitaet-raster { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 860px) { .wege { grid-template-columns: 1fr; } }
+@media (max-width: 560px) {
+  .weg { grid-template-columns: 1fr; }
+  .weg-bild { height: 170px; }
+  .weg-finn img { max-height: 160px; width: auto; }
+  .wege-klein, .qualitaet-raster { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .qualitaet-raster { gap: 12px; }
+  .qualitaet-raster > div { display: grid; grid-template-columns: 40px 1fr; column-gap: 12px; padding: 16px; }
+  .qualitaet-raster img { width: 40px; height: 40px; grid-row: span 2; margin: 0; }
+  .qualitaet-raster h3 { margin-bottom: 4px; }
+  .qualitaet-raster p { font-size: .93rem; }
+}
